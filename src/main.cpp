@@ -12,7 +12,7 @@
 TCA9548A mux;
 MbedI2C i2c(I2C_SDA, I2C_SCL);
 
-void sendMAVSonar(uint8_t , MAV_SENSOR_ORIENTATION , uint16_t);
+void sendMAVSonar(uint8_t , MAV_SENSOR_ORIENTATION , uint16_t); 
 
 //==============================================================
 // SETUP
