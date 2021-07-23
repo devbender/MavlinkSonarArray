@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 
+#include "sonarParams.h"
 #include "TCA9548A.h"
 #include "c_library_v2/common/mavlink.h"
 
@@ -42,35 +43,27 @@ void loop() {
 //==============================================================
 void sendMAVSonar(uint8_t SYSTEM_ID, MAV_SENSOR_ORIENTATION SONAR_ORIENTATION, uint16_t SONAR_DISTANCE_MM) {
 
-  uint16_t SONAR_DISTANCE_CM = round( SONAR_DISTANCE_MM ) / 10;
+  uint16_t SONAR_DISTANCE_CM = round( SONAR_DISTANCE_MM  / 10 );
   
   mavlink_message_t msg;
   uint8_t mav_buffer[MAVLINK_MAX_PACKET_LEN];
-  
-  uint16_t min_distance = 2;
-  uint16_t max_distance = 400;
-  uint8_t id = 1;
-  uint8_t covariance = 255;
-  float horizontal_fov = 25.00;
-  float vertical_fov = 5.00;
-  float quaternion[4] = {0.00, 0.00, 0.00, 0.00};
-  uint8_t signal_quality = 100;
+  float quaternion[4] = SONAR_QUATERNION;
 
   mavlink_msg_distance_sensor_pack( SYSTEM_ID,
-                              MAV_COMP_ID_OBSTACLE_AVOIDANCE,
-                              &msg,
-                              0,
-                              min_distance,
-                              max_distance,
-                              SONAR_DISTANCE_CM,
-                              MAV_DISTANCE_SENSOR_ULTRASOUND,
-                              id,
-                              SONAR_ORIENTATION,
-                              covariance,
-                              horizontal_fov,
-                              vertical_fov,
-                              &quaternion[0],
-                              signal_quality);
+                                    MAV_COMP_ID_OBSTACLE_AVOIDANCE,
+                                    &msg,
+                                    0,
+                                    SONAR_MIN_DISTANCE,
+                                    SONAR_MAX_DISTANCE,
+                                    SONAR_DISTANCE_CM,
+                                    MAV_DISTANCE_SENSOR_ULTRASOUND,
+                                    SONAR_ID,
+                                    SONAR_ORIENTATION,
+                                    SONAR_COVARIANCE,
+                                    SONAR_HOR_FOV,
+                                    SONAR_VER_FOC,
+                                    &quaternion[0],
+                                    SONAR_SIGNAL_QUALITY);
 
   uint16_t len = mavlink_msg_to_send_buffer(mav_buffer, &msg);
   Serial1.write(mav_buffer, len);
