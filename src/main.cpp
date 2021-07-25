@@ -2,7 +2,6 @@
 #include <Wire.h>
 
 #include "sonarParams.h"
-#include "TCA9548A.h"
 #include "c_library_v2/common/mavlink.h"
 
 #define I2C_SDA 16
@@ -10,7 +9,8 @@
 #define I2C_CLK_100MHZ  100*1000
 #define I2C_CLK_400MHZ  400*1000
 
-TCA9548A mux;
+#define MAV_SYSTEM_ID 1
+
 MbedI2C i2c(I2C_SDA, I2C_SCL);
 
 void sendMAVSonar(uint8_t , MAV_SENSOR_ORIENTATION , uint16_t); 
@@ -24,22 +24,31 @@ void setup() {
   Serial.begin(115200);
   Serial1.begin(57600);
 
-  mux.begin(i2c);
-  mux.closeAll();
+
 }
 
 //==============================================================
 // LOOP
 //==============================================================
 void loop() {
-  Serial.println("Hello World!");
-  delay(1000);
+
 }
 
 
 
 //==============================================================
-// MAVLINK SONAR
+// SONAR TEST FX
+//==============================================================
+void sonarTest() {
+  for(int i=SONAR_MIN_DISTANCE; i<= SONAR_MAX_DISTANCE; i+=10) {
+    Serial.println("Testing Sonar...");
+    sendMAVSonar(1, MAV_SENSOR_ROTATION_NONE, i);
+    delay(500);
+  }
+}
+
+//==============================================================
+// MAVLINK SONAR OUT
 //==============================================================
 void sendMAVSonar(uint8_t SYSTEM_ID, MAV_SENSOR_ORIENTATION SONAR_ORIENTATION, uint16_t SONAR_DISTANCE_MM) {
 

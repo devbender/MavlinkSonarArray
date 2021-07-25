@@ -4,7 +4,7 @@
 #define SONAR_ID 1
 #define SONAR_COVARIANCE 255
 
-#define SONAR_HOR_FOV 25.00
+#define SONAR_HOR_FOV 15.00
 #define SONAR_VER_FOC 5.00
 
   
