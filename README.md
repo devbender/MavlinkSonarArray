@@ -1,10 +1,10 @@
 # Mavlink Sonar Array
 
-Sonar sensor array with Mavlink output for Ardupilot obstacle avoidance.
+Sonar sensor array with Mavlink output for Ardupilot obstacle avoidanc using several Qwiic Ultrasonic Distance Sensors and a Qwiic Mux.
 
-Ardupilot obstacle avoidace using several Qwiic Ultrasonic Distance Sensors:
+<img src="https://cdn.sparkfun.com//assets/parts/1/6/9/1/6/17777-SparkFun_Qwiic_Ultrasonic_Distance_Sensor_-_HC-SR04-01.jpg" width="200"/>
 
-![alt text](https://cdn.sparkfun.com//assets/parts/1/6/9/1/6/17777-SparkFun_Qwiic_Ultrasonic_Distance_Sensor_-_HC-SR04-01.jpg)
+<img src="https://cdn.sparkfun.com//assets/parts/1/5/6/8/9/16784-SparkFun_Qwiic_Mux_Breakout_V2_-_8_Channel__TCA9548A_-01.jpg" width="200"/>
 
 
 ## Credits
