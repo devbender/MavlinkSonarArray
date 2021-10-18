@@ -1,4 +1,3 @@
-
-[submodule "include/c_library_v2"]
-	path = include/c_library_v2
+[submodule "c_library_v2"]
+	path = c_library_v2
 	url = https://github.com/mavlink/c_library_v2
