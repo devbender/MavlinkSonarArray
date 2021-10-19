@@ -1,3 +1,15 @@
+/*  ======================================================================
+ *  *** Mavlink Sonar Array ***
+ *  
+ *  File: MavlinkSonarArray.ino
+ *  Description: Main ino file 
+ *  
+ *  MIT License  
+ *  Copyright (c) 2021 Juan Benitez <juan.a.benitez(a)gmail.com>
+ *  
+ *  ======================================================================
+ */
+
 #include <Wire.h>
 
 #include "qwiicSonar.h"

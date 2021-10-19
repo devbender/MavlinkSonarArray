@@ -1,3 +1,15 @@
+/*  ======================================================================
+ *  *** Mavlink Sonar Array ***
+ *  
+ *  File: mavlinkFunctions.h
+ *  Description: Mavlink heartbeat and distance msg output functions
+ *  
+ *  MIT License  
+ *  Copyright (c) 2021 Juan Benitez <juan.a.benitez(a)gmail.com>
+ *  
+ *  ======================================================================
+ */
+
 #pragma once
 
 #include "c_library_v2/common/mavlink.h"

@@ -1,3 +1,15 @@
+/*  ======================================================================
+ *  *** Mavlink Sonar Array ***
+ *  
+ *  File: qwiicMux.cpp
+ *  Description: Qwiic Mux class file
+ *  
+ *  MIT License  
+ *  Copyright (c) 2021 Juan Benitez <juan.a.benitez(a)gmail.com>
+ *  
+ *  ======================================================================
+ */
+
 #include "qwiicMux.h"
 
 boolean qwiicMux::init() {

@@ -1,3 +1,15 @@
+/*  ======================================================================
+ *  *** Mavlink Sonar Array ***
+ *  
+ *  File: qwiicSonar.h
+ *  Description: Qwiic Sonar class file
+ *  
+ *  MIT License  
+ *  Copyright (c) 2021 Juan Benitez <juan.a.benitez(a)gmail.com>
+ *  
+ *  ======================================================================
+ */
+ 
 #pragma once
 
 #include <Wire.h>

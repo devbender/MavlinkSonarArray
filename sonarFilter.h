@@ -1,3 +1,21 @@
+/*  ======================================================================
+ *  *** Mavlink Sonar Array ***
+ *  
+ *  File: sonarFilter.h
+ *  Description: Qwiic Sonar filtering class file
+ *  
+ *  MIT License
+ *  Copyright (c) 2021 Juan Benitez <juan.a.benitez(a)gmail.com>
+ *  
+  * Kalman Filter implementation extracted from:
+ * https://github.com/denyssene/SimpleKalmanFilter
+ * 
+ * MIT License
+ * Copyright (c) 2017 Denys Sene
+ *  
+ *  ======================================================================
+ */
+ 
 #pragma once
 
 #include <math.h>

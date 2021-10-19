@@ -1,3 +1,15 @@
+/*  ======================================================================
+ *  *** Mavlink Sonar Array ***
+ *  
+ *  File: qwiicSonar.cpp
+ *  Description: Qwiic Sonar class file
+ *  
+ *  MIT License  
+ *  Copyright (c) 2021 Juan Benitez <juan.a.benitez(a)gmail.com>
+ *  
+ *  ======================================================================
+ */
+
 #include "qwiicSonar.h"
 
 qwiicSonar::qwiicSonar(uint8_t port) {

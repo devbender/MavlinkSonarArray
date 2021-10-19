@@ -1,3 +1,15 @@
+/*  ======================================================================
+ *  *** Mavlink Sonar Array ***
+ *  
+ *  File: sonarFilter.cpp
+ *  Description: Qwiic Sonar filtering class file
+ *  
+ *  MIT License  
+ *  Copyright (c) 2021 Juan Benitez <juan.a.benitez(a)gmail.com>
+ *  
+ *  ======================================================================
+ */
+ 
 #include "sonarFilter.h"
 
 sonarFilter::sonarFilter(uint8_t _samples) {
