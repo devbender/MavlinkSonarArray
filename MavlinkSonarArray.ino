@@ -71,8 +71,8 @@ void loop() {
   Serial.printf("RAW,MAVG,WAVG,MEDIAN,KF,\n%i,%i,%i,%i,%i\n", sonar[SONAR_ID].getFiltered(RAW), 
                                                               sonar[SONAR_ID].getFiltered(M_AVERAGE),
                                                               sonar[SONAR_ID].getFiltered(W_AVERAGE),
-                                                              sonar[SONAR_ID].getFiltered(MEDIAN),,
-                                                              sonar[SONAR_ID].getFiltered(KALMAN_FILTER,);
+                                                              sonar[SONAR_ID].getFiltered(MEDIAN),
+                                                              sonar[SONAR_ID].getFiltered(KALMAN_FILTER) );
   #endif
   
   //-----------------------------------------------------------
