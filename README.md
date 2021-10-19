@@ -11,4 +11,4 @@ Sonar sensor array with Mavlink output for Ardupilot obstacle avoidanc using sev
 
 Copyright (C) 2021 by Juan Benitez   <juan.a.benitez(at)gmail.com>
 
-Distributed under GPLv3
+Distributed under MIT License.
